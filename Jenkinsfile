@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Priyaschavan/static-website.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t static-website .'
